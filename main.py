@@ -6,10 +6,10 @@ from dotenv import dotenv_values
 
 config = dotenv_values("config.env")
 
-CLIENT_ID = config['id']
-CLIENT_SECRET = config['secret']
-username = config['username']
-password = config['password']
+CLIENT_ID = config['reddit_id']
+CLIENT_SECRET = config['reddit_secret']
+username = config['reddit_username']
+password = config['reddit_password']
 
 vis = {}
 comments = [
