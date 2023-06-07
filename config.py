@@ -1,10 +1,10 @@
 import os
 
 def save_config_env():
-    id = input("Enter ID: ")
-    secret = input("Enter Secret: ")
-    username = input("Enter Username: ")
-    password = input("Enter Password: ")
+    reddit_id = input("Enter ID: ")
+    reddit_secret = input("Enter Secret: ")
+    reddit_username = input("Enter Username: ")
+    reddit_password = input("Enter Password: ")
 
     if os.path.exists("config.env"):
         print("config.env file already exists. Updating the configuration.")
@@ -14,10 +14,10 @@ def save_config_env():
         mode = "w"  # Write mode
 
     with open("config.env", mode) as f:
-        f.write(f"id={id}\n")
-        f.write(f"secret={secret}\n")
-        f.write(f"username={username}\n")
-        f.write(f"password={password}\n")
+        f.write(f"reddit_id='{reddit_id}'\n")
+        f.write(f"reddit_secret='{reddit_secret}'\n")
+        f.write(f"reddit_username='{reddit_username}'\n")
+        f.write(f"reddit_password='{reddit_password}'\n")
 
     print("Configuration saved to config.env")
 
